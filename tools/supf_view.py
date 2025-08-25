@@ -36,7 +36,7 @@ def dump_supf(filename : str):
     f.close()
     
     magic = buff[0:4]
-    assert(magic == b'\x03507')
+    assert(magic == b'\x03507' or magic == b'\x03510')
 
     pos = buff[4:]
     (length,segs) = read_lv(pos);
